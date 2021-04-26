@@ -1,0 +1,57 @@
+.content_container {
+  margin-top: 3%;
+}
+
+.table {
+  margin-top: 2%;
+  width: 100%;
+}
+
+.cell {
+  font-size: 18px;
+  border: #ccc 1px solid;
+  padding: 5px 10px;
+}
+
+.total {
+  text-align: right;
+}
+
+.head {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.btn_delete input[type="submit"] {
+  border-radius: 18px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  display: block;
+  margin-left: 80%;
+  margin-bottom: 0%;
+  border: 3px solid rgb(54, 54, 54);
+  width: 15%;
+  padding: 8px 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn_order input[type="submit"] {
+  border-radius: 18px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  display: block;
+  margin-left: 85%;
+  margin-top: 2%;
+  border: 3px solid rgb(54, 54, 54);
+  width: 10%;
+  padding: 8px 2px;
+  outline: none;
+  cursor: pointer;
+}

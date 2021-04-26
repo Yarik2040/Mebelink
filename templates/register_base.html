@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+    <link rel="shortcut icon" href="/static/img/icon.ico" type="image/ico">
+    <title>Регистрация</title>
+  <body>
+    <form class="box" action="/register/check" method="POST">
+
+      <h1>Регистрация</h1>
+      <input type="text" name="email" placeholder="email">
+      <input type="password" name="password" placeholder="Пароль">
+      <input type="password" name="password_repeat" placeholder="Подтвердите пароль">
+      <input type="submit" name="register_btn" value="Регистрация">
+      <textarea class="verdict" readonly>{% block verdict %}{% endblock %}</textarea>
+    </form>
+  </body>
+</html>

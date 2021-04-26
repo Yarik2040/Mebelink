@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Корзина
+{% endblock %}
+
+{% block user %}
+{{user}}
+{% endblock %}
+
+{% block entrance %}
+{{entrance}}
+{% endblock %}
+
+
+{% block body %}
+
+<div class="content_container">
+    <h1 style="text-align: center; font-weight: 900;">Корзина</h1>
+    <div>
+        <table class="table">
+            <tr>
+                <th class="cell head">Наименование товара</th>
+                <th class="cell head">Количество, шт.</th>
+                <th class="cell head">Цена за 1 ед., товара</th>
+                <th class="cell head">Стоимость, руб.</th>
+            </tr>
+
+            {% for item in furniture %}
+
+                <tr>
+                    <td class="cell">{{item}}</td>
+                    <td class="cell">{{furniture[item]["amount"]}}</td>
+                    <td class="cell">{{furniture[item]["price"]}}</td>
+                    <td class="cell">{{furniture[item]["total"]}}</td>
+                </tr>
+
+            {% endfor %}
+
+        <tr>
+            <td colspan="3" class="cell total">ИТОГО:</td> <td class="cell">{{total_price}}</td>
+        </tr>
+        </table>
+        <form action="/basket" class="btn_order" method="POST">
+            <input type="submit" name="btn" value="Очистить корзину">
+            <input type="submit" name="btn" value="Заказать">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

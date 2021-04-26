@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Mebelink
+{% endblock %}
+
+{% block user %}
+{{user}}
+{% endblock %}
+
+{% block entrance %}
+{{entrance}}
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="content_container">
+        <h1 style="text-align: center; font-weight: 900;">Мои заказы</h1>
+        {% for orders in all_orders %}
+
+        <div class="order">
+            <h3 class="status">Статус: заказ в обработке</h3>
+            <table class="table">
+                <tr>
+                    <th class="cell head">Наименование товара</th>
+                    <th class="cell head">Количество, шт.</th>
+                    <th class="cell head">Цена за 1 ед., товара</th>
+                    <th class="cell head">Стоимость, руб.</th>
+                </tr>
+
+            {% for order in orders %}
+                    <tr>
+                        {% for item in order %}
+                            <td class="cell">{{order[item]}}</td>
+                        {% endfor %}
+                    </tr>
+            {% endfor %}
+            </table>
+        </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="shortcut icon" href="/static/img/icon.ico" type="image/ico">
+    <title>Вход в систему</title>
+  <body>
+    <form class="box" action="/check_btn" method="POST">
+
+      <h1>Вход в систему</h1>
+      <input type="text" name="email" placeholder="email">
+      <input type="password" name="password" placeholder="Пароль">
+      <input type="submit" name="btn" value="Вход">
+      <input type="submit" name="btn" value="Регистрация">
+      <textarea class="verdict" readonly>{% block verdict %}{% endblock %}</textarea>
+    </form>
+  </body>
+</html>

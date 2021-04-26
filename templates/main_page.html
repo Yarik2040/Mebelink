@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Mebelink
+{% endblock %}
+
+{% block user %}
+{{user}}
+{% endblock %}
+
+{% block entrance %}
+{{entrance}}
+{% endblock %}
+
+{% block body %}
+
+<div class="content_container">
+    <h1 style="text-align: center; font-weight: 900;">Товары</h1>
+    <form>
+        <textarea class="verdict" readonly>{% block verdict %}{{verdict}}{% endblock %}</textarea>
+    </form>
+
+
+{% for item in furniture %}
+
+<div class="product">
+
+    <div class="picture">
+        <img src="/static/img/{{item.photo}}" alt="{{item.photo}}">
+    </div>
+
+    <div class="about">
+        <h3 class="title">{{item.title}}</h3>
+        </br>
+        {{item.content}}
+    </div>
+
+    <div class="additionall_info">
+        <h3>{{item.price}} руб.</h3>
+        </br>
+        <h5>На складе: {{item.amount}} шт.</h5>
+        <form action="/main_page" method="POST">
+            
+            <input type="text" name="amount" value="1">
+            </br>
+            <input type="submit" name="btn" value="В корзину">
+            </br>
+            <input class="id" type="text" name="id" value="Артикул: #{{item.id}}" readonly>
+        </form>
+    </div>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}

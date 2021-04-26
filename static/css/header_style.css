@@ -1,0 +1,90 @@
+body{
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+  margin-left: 0%;
+}
+
+header {
+  width: 100%;
+  background-color: black;
+  height: 70px;
+}
+
+header a {
+  color: white;
+}
+
+.hd {
+  font-size: 18px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  color: white;
+}
+
+.logo {
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-right: 10%;
+  font-size: 36px;
+}
+
+.logo :hover {
+  color: white;
+  text-decoration: none;
+}
+
+.hd :hover {
+  color: white;
+  text-decoration: none;
+}
+
+.dropbtn {
+  background-color: #000000;
+  padding: 0%;
+  height: 70px;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  border-radius: 7px;
+  outline: none;
+  background-color: rgb(231, 231, 231);
+  outline-offset: 0;
+  box-shadow: none;
+}
+
+.dropdown-content a {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  margin-top: 2px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 7px;
+  background-color: rgb(209, 209, 209);
+}
